@@ -75,23 +75,30 @@ header {
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
-
+    
     .destination {
       width: 30%;
-      margin-bottom: 30px;
-      
+      margin-bottom: 30px;  
     }
+
     .btn {
       display: flex;
       justify-content: center;
       align-items: center;
+      color: @white;
+      background-color: @button-bg;
       font-size: 20px;
-      color: white;
-      background-color: rgb(23, 131, 125);
       width: 80%;
       height: 15%;
       border-radius: 15px;
       margin-bottom: 15%;
     }
   }
+}
+
+@media (max-width: 500px){
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
