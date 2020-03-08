@@ -3,10 +3,31 @@ header {
   width: 100%;
   margin: 0 auto;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   border-bottom: 2px dashed @navigation-border;
+  @media (max-width: 500px){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   div {
     align-items: center;
+    @media (max-width: 500px){
+      h1{
+        font-size: 3.0rem;
+      }
+      
+    }
+    
+  }
+  nav {
+    margin-right: 1%;
+    width: 40%;
+    @media (max-width: 500px){
+      width: 70%;
+    }
   }
 }
 .home {
@@ -14,6 +35,14 @@ header {
   .content-top {
     margin-bottom: 3% 0;
     border-bottom: 2px dashed @navigation-border;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 500px){
+      width: 90%;
+      margin-left: 5%;
+    }
     .img-content-2 {
       width: 100%;
       margin-bottom: 3%;
@@ -25,79 +54,71 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
+      @media (max-width: 500px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media (max-width: 500px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media (max-width: 500px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+      }
 
       img {
         border-radius: 10px;
       }
-    }
-    @media (max-width: 500px){
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      border: solid 1px red;
-
-      .text-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
-        align-items: left;
-        width: 100%;
-        text-align: left;
-
-      .img {
-        width: 100%;
-      }
-      
     }
   }
 
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    @media (max-width: 500px){
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      width: 100%;
+    }
 
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+      @media (max-width: 500px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
-    }
-    @media (max-width: 500px){
-      display: flex;
-      flex-direction: column-reverse;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      border: solid 1px red;
-
-      .text-content {
+      @media (max-width: 500px){
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        padding: 0 auto;
-        width: 100%;
-
-      .img-content {
-        img {
-         width: 100%; 
-        }
+        width: 90%;
       }
+    }
   }
 
   .content-destination {
@@ -114,11 +135,22 @@ header {
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media (max-width: 500px){
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
-        
+      @media (max-width: 500px){
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+      }  
     }
 
     .btn {
@@ -132,16 +164,18 @@ header {
       height: 15%;
       border-radius: 15px;
       margin-bottom: 15%;
-    }
-  }
-    @media (max-width: 500px){
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      .content-pick {
+      @media (max-width: 500px){
         display: flex;
-        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: @white;
+        background-color: @button-bg;
+        font-size: 20px;
+        width: 90%;
+        height: 20%;
+        border-radius: 15px;
+        
       }
     }
+  }
 }
