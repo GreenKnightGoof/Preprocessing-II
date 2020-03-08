@@ -11,6 +11,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 1%;
   }
   div {
     align-items: center;
@@ -124,6 +125,10 @@ header {
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    @media (max-width: 500px){
+      width: 90%;
+    }
+
 
     img {
       border-radius: 10px;
@@ -140,7 +145,8 @@ header {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 100%;
+      width: 80%;
+      margin-left: 10%;
     }
 
     .destination {
@@ -149,7 +155,7 @@ header {
       @media (max-width: 500px){
         display: flex;
         flex-direction: column;
-        width: 80%;
+        width: 90%;
       }  
     }
 
